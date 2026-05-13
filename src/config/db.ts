@@ -2,7 +2,10 @@
 
 const connectDB = async (): Promise<void> => {
   try {
-    const uri = "mongodb://codewithashu74_db_user:AshishTest123@ac-wmoqa9u-shard-00-00.bzpsjg9.mongodb.net:27017,ac-wmoqa9u-shard-00-01.bzpsjg9.mongodb.net:27017,ac-wmoqa9u-shard-00-02.bzpsjg9.mongodb.net:27017/ashish-dashboard?ssl=true&replicaSet=atlas-11oepk-shard-0&authSource=admin";
+    const uri = process.env.MONGO_URI;
+    if (!uri) {
+      throw new Error("MONGO_URI is not defined in environment variables");
+    }
     const conn = await mongoose.connect(uri);
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (err) {

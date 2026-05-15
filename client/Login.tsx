@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -29,13 +29,19 @@ export default function Login() {
     <div style={{ maxWidth: 400, margin: "100px auto", padding: 20 }}>
       <h2>Admin Login</h2>
       <form onSubmit={handleLogin}>
-        <input type="email" placeholder="Email" value={email}
+        <input
+          type="email" placeholder="Email" value={email}
           onChange={(e) => setEmail(e.target.value)} required
-          style={{ width: "100%", padding: 8, margin: "8px 0" }} />
-        <input type="password" placeholder="Password" value={password}
+          style={{ width: "100%", padding: 8, margin: "8px 0" }}
+        />
+        <input
+          type="password" placeholder="Password" value={password}
           onChange={(e) => setPassword(e.target.value)} required
-          style={{ width: "100%", padding: 8, margin: "8px 0" }} />
-        <button type="submit" style={{ width: "100%", padding: 10 }}>Login</button>
+          style={{ width: "100%", padding: 8, margin: "8px 0" }}
+        />
+        <button type="submit" style={{ width: "100%", padding: 10 }}>
+          Login
+        </button>
       </form>
       {message && <p style={{ marginTop: 20 }}>{message}</p>}
       <p style={{ marginTop: 15 }}>

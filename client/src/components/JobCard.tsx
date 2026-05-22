@@ -1,5 +1,5 @@
 interface Job {
-    title: string;;
+    title: string;
     company: string;
     location: string;
     url: string;

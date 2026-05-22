@@ -2,7 +2,7 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "https://ashish-dashboard.onrender.com/api/auth";
 
 interface User {
   _id: string;

@@ -1,8 +1,8 @@
-﻿import { useState } from "react";
+﻿cdimport { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "https://ashish-dashboard.onrender.com/api/auth";
 
 export default function Login() {
   const [email, setEmail] = useState("");
